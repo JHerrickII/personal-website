@@ -219,6 +219,11 @@
 					</div>
 				</section>
 
+
+
+
+
+
 		<!-- Contact -->
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
@@ -227,10 +232,44 @@
 						<p>If you have a project that needs fresh ideas or just fancy saying hey, then get in touch. I am available for <strong>freelance work</strong>!</p>
 					</header>
 					<div class="box">
-						<form method="post" action="#">
-							<div class="field half first"><input type="text" name="name" placeholder="Name" /></div>
-							<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-							<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+						<div class = "container form-signin">
+
+													 <?php
+													 require_once("./library.php");
+													 $con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
+
+													 if (mysqli_connect_errno()){
+														echo "Failed to connect to MySQL: " . mysqli_connect_error();
+												}
+
+												if(!isset($_POST['name']) || trim($_POST['name']) == '' || !isset($_POST['email']) || trim($_POST['email']) == '' || !isset($_POST['message']) || trim($_POST['message']) == '')
+											  {
+													   echo "Please fill out all fields.";
+												}
+												else {
+												$name = $_POST['name'];
+												$email = $_POST['email'];
+												$message = $_POST['message'];
+												$sql="INSERT INTO messages (name, email, message)
+			                  VALUES  ('$name', '$email', '$message')";
+			                  if (!mysqli_query($con,$sql)) {
+			                    die('Error: ' . mysqli_error($con));
+			                  }
+												else
+			                  {
+													echo "<center><h2 style='color: green'>Success! Thank you for your message.</h2></center>";
+												}
+											}
+												mysqli_close($con);
+								?>
+
+
+
+								</div>
+						<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+							<div class="field half first"><input type="text" name="name" placeholder="Name" required/></div>
+							<div class="field half"><input type="email" name="email" placeholder="Email" required/></div>
+							<div class="field"><textarea name="message" placeholder="Message" rows="6" required></textarea></div>
 							<ul class="actions">
 								<li><input type="submit" value="Send Message" /></li>
 							</ul>
@@ -238,6 +277,13 @@
 					</div>
 				</div>
 			</section>
+
+
+
+
+
+
+
 
 		<!-- Footer -->
 			<footer id="footer">
