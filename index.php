@@ -7,6 +7,7 @@
 <html>
 	<head>
 		<title>John Herrick - A Front End Developer</title>
+		<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -80,11 +81,12 @@
 					<header>
 						<h2>A Taste of my Work</h2>
 						<p>I had the chance to create real, compelling applications
-						on a variety of platforms. These are just a few.</p>
+						on a variety of platforms. These are just a few.
+						<strong>Click on the project name to view it in your browser!</strong></p>
 					</header>
 
 					<!-- Work Gallery  -->
-						<center><p><a href="http://nlurelationsviz.mybluemix.net/" target="blank" id="links">NewsTree</p></a></center>
+						<center><p><a href="http://nlurelationsviz.mybluemix.net/" target="blank" id="links">The NewsTree Project</p></a></center>
 						<div class="gallery">
 							<article class="from-left">
 								<a href="images/fulls/newstree.jpg" class="image fit"><img src="images/thumbs/newstree.jpg" title="The News Tree Project: News digestion and relationship mapping application. Built using D3 mounted on React.js." alt="" /></a>
@@ -190,7 +192,7 @@
 						<!-- Gallery  -->
 							<div class="gallery">
 								<article class="from-left">
-									<a href="images/fulls/lambdas.jpg" class="image fit"><img src="images/thumbs/lambdas.jpg" title="Lambda Phi Epsilon International Fraternity." alt="" /></a>
+									<a href="images/fulls/lambdas.jpg" class="image fit"><img src="images/thumbs/lambdas.jpg" title="Professional and Rush Chairs: Lambda Phi Epsilon International Fraternity." alt="" /></a>
 								</article>
 								<article class="from-right">
 									<a href="images/fulls/d7.jpg" class="image fit"><img src="images/thumbs/d7.jpg" title="UVA District 7 Representative. Linking Filipino-American college organizations from Boston, to North Carolina." alt="" /></a>
